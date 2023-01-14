@@ -1,0 +1,7 @@
+<%- include('partials/header')-%>
+<% output.forEach(function(row){ %>
+<% if (row.postTitle==path){ %>
+<h2><%= row.postTitle %></h2>
+<p><%= row.postBody %></p>
+<% }}); %>
+<%- include('partials/footer') -%>

@@ -1,0 +1,10 @@
+<%- include('partials/header') -%>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+  <div class="scroll">
+    <% output.forEach(function(row){ %>
+      <h2><%= row.postTitle.substring(0,100) %></h2>
+      <p><%= row.postBody.substring(0,100) %> <a href="/posts/<%= row.postTitle%>">Read more</a></p>
+    <% }); %>
+  </div>
+<%- include('partials/footer') -%>
